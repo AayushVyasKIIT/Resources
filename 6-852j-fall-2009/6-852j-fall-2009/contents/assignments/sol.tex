@@ -1,0 +1,35 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in,headheight=14pt,includeheadfoot]{geometry}
+
+\def\thestudent{Student's Name}
+\def\theprob{X}
+\def\thepart{Y}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhf[HLEO]{\thestudent}
+\fancyhf[HCEO]{6.852 - Problem Set \theprob, Part \thepart}
+\fancyhf[HREO]{Problem \theenumi}
+\fancyhf[FREO]{Page \thepage\ of \pageref{LastPage}}
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\begin{document}
+  \begin{enumerate}
+    \item Problem 1:
+
+    Here is solution 1.
+
+    \pagebreak
+    \item Problem 2:
+
+    Here is solution 2.
+    
+    \pagebreak
+    \item Problem 3:
+
+    Here is solution 3, etc.
+  \end{enumerate}
+\end{document}
