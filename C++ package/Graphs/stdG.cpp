@@ -31,37 +31,3 @@ class G{
             }
         }
 };
-class BFS: public G{
-    public:
-        map<int,bool> vis;
-
-        void traverse(int source){
-            queue<int> q;
-            q.push(source);
-            vis[source] = true;
-            while(!q.empty()){
-                int u = q.front();
-                cout << u << " ->";
-                for(auto e : adj[u]){
-                    if(vis[e]==false){
-                        q.push(e);
-                        vis[e] = true;
-                    }
-                }
-                q.pop();
-            }
-            cout << "x" << endl;
-
-        }
-};
-
-int main(){
-
-    BFS g1;
-    g1.add(0,1);
-    g1.add(0,2);
-    g1.add(1,3);
-    
-    g1.traverse(0);
-
-}
