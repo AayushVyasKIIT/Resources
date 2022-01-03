@@ -5,6 +5,7 @@ using namespace std;
 
 int clearBits(int n,int pos){
     int mask = ~(1<<pos);
+    cout << mask << endl;
     return (n&mask);
 
 }

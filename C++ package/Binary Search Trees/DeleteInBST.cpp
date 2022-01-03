@@ -11,11 +11,10 @@ struct node{
 node* InOrderSuccessor(node* rootRight,int key){
     node* curr = rootRight;
     // we will be looking in the left of the current node because
-    // our current node is root->right which means if we look for the values in the curr->right, the values will be greater than
-    // root->right->data
+    // our current node is root->right which means if we look for the values in the curr->right, the values will be greater than root->right->data
     // but we want to replace the parent with value < root->right->data in order to preserve the binary tree property,
     // this can be done by looking in the left subtree for smaller value that fits just correctly. and its value will be < root->right
-    //thus curr->left->data will always be < root->right->data.
+    // thus curr->left->data will always be < root->right->data.
     while(curr && curr->left!=NULL){
         curr = curr->left;
     }
